@@ -6,10 +6,12 @@
 	(not all of them are available to you), and then just follow the templates.
 	
 	_________________________________ s e t t i n g _________________________________
+	(before the steps below please head to '../storage/starbound.config' and set the
+	parameter 'safeScripts' to false, it is required to read the IO functions)
 	
 	At first you should open /lib/@set.lua and set the number of 'characterAmount'
-	to the amount characters you have, or leave it if you have only one character. It
-	is required for commands to work properly. That's all, you can do anything now.
+	to the amount of characters you have, or leave it if you have only one character.
+	It is required for commands to work properly. That's all, you can do anything now.
 	
 	Well, what to do? Create new functions/commands, of course!
 	Commands are located in the function you checked above. Just copypaste and modify
