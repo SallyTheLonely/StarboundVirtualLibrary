@@ -1,0 +1,16 @@
+{
+	"author" : "SallyTheLonely",
+	
+	"name" : "VLibSTL",
+	"friendlyName" : "Virtual Library by SallyTheLonely",
+	"description" : "^#ff77aa;\"Virtual library\" made for storing endless functions inside the tech script.^reset; \nIncludes my additional libraries: ^#aa77ff;metadata_read^reset; and ^#aa77ff;player_movement^reset;. First provides chat commands (found in ^#aa77ff;'../lib/@set.lua'^reset;), second (you can disable it) provides advanced movement manipulations.",
+	
+	"version" : "1.0",
+	"tags" : "In-Game Tools",
+	
+	"priority" : 8000,
+	"link" : "https://github.com/SallyTheLonely",
+	
+	"requires" : [],
+	"includes" : ["VLib_Sally", "metadataReadSTL", "playerMovementSTL", "Sally_assets", "Sally_misc"]
+}

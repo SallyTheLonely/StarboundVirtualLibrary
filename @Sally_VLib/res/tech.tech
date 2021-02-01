@@ -1,0 +1,10 @@
+{
+  "name" : "VLibSTL",
+  "type" : "body",
+  "scripts" : ["/@VLib.lua"],
+  "description" : "^#aa55ff;Virtual Library by SallyTheLonely^reset;",
+  "shortDescription" : "^#aa55ff;@VLib.lua^reset;",
+  "rarity" : "Legendary",
+  "icon" : "/res/tech_icon.png",
+  "chipCost" : 0
+}
