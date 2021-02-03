@@ -55,7 +55,7 @@ User.set.movement = function()
 		end
 		
 	  -- lock position after a short delay if not moving
-		if not (a or d or w or s or j or _sit) then
+		if mcontroller.onGround() and not (a or d or w or s or j or _sit) then
 			_pos_lock = ((_pos_lock or 1) % 30) + 1
 			if _pos_lock == 30 then _pos_locked = true end
 			
