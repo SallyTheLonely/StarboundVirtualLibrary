@@ -49,24 +49,18 @@ User.set.movement = function()
 				mcontroller.controlParameters({ collisionEnabled = false })
 			end
 			
-			if (mcontroller.onGround() or (j and s)) and not _pos_locked then
+			if (mcontroller.onGround() or (j and s)) and not set_lastPos then
 				fix_movement = false;  lastPos = pos
 			end
 		end
 		
 	  -- lock position after a short delay if not moving
 		if mcontroller.onGround() and not (a or d or w or s or j or _sit) then
-			_pos_lock = ((_pos_lock or 1) % 30) + 1
-			if _pos_lock == 30 then _pos_locked = true end
-			
-			if _pos_locked then
-				if not set_lastPos then lastPos = pos end
-				set_lastPos = true;  tech.setParentState("stand")
-				mcontroller.setVelocity({0, 0});  mcontroller.setPosition(lastPos)
-				mcontroller.controlModifiers({ movementSuppressed = true })
-			end
-			
-			else _pos_lock = 0;  _pos_locked = false
+			if not set_lastPos then lastPos = pos end
+			set_lastPos = true;  tech.setParentState("stand")
+			mcontroller.setVelocity({0, 0});  mcontroller.setPosition(lastPos)
+			mcontroller.controlModifiers({ movementSuppressed = true })
+			if (a or d or w or s or j or _sit) then set_lastPos = false end
 		end
 		
 	  -- sit on the [cursor pos]/[entity at cursor pos] --
