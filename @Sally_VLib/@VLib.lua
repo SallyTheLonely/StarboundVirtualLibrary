@@ -3,10 +3,10 @@ User = {set = {}, upd = {}, add = {}} -- virtual library (VLib)
 
 function init() -- @set
 	require "/scripts/vec2.lua";  require "/scripts/status.lua"
-	require '/lib/@set.lua';  require '/lib/@upd.lua';  require '/lib/@commands.lua'
+	require '/lib/@set.lua';  require '/lib/@upd.lua'
 	
+	--require '/lib/commands.lua'
 	require '/lib/player_movement.lua' -- you can comment it to disable
-	-- require '/lib/.lua'
 	
 	for _, v in pairs(User.set) do v() end -- VLib init() function
 end

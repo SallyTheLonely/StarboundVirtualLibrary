@@ -6,8 +6,12 @@
 	(not all of them are available to you), and then just follow the templates.
 	
 	_________________________________ s e t t i n g _________________________________
-	(before the steps below please head to '../storage/starbound.config' and set the
-	parameter 'safeScripts' to false, it is required to read the IO functions)
+	(if you want the commands to work, before the steps below please head to
+	'../storage/starbound.config' and set the parameter 'safeScripts' to false, and
+	then delete the comment near [require '/lib/commands.lua'] in '/@VLib.lua'. It is
+	not recommended if you're going to play on the popular servers, because it opens
+	some spots in your client. Basically, some particular people with custom DLLs
+	may be able to get access to your 'io.*' and 'os.*' functions)
 	
 	At first you should open /lib/@set.lua and set the number of 'characterAmount'
 	to the amount of characters you have, or leave it if you have only one character.
@@ -63,7 +67,7 @@
 	
 	/res/tech.tech ; /res/tech_icon.png :: parts of the tech
 	
-	/lib/@commands.lua :: metadata read function, modify at your risk (better not)
+	/lib/commands.lua :: metadata read function, modify at your risk (better not)
 	
 	/lib/@set.lua :: init() function for VLib, includes metadata (chat) commands
 	
